@@ -1,0 +1,13 @@
+$margin-before: 1488px;
+$margin-color: #fff;
+
+.manya {
+	background-color: $margin-color;
+	margin-top: 10px;
+	width: 200px;
+	height:200px;
+	&::before {
+		margin-top: $margin-before;
+		position: absolute;
+	}
+}

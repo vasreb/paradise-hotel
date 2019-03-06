@@ -1,0 +1,10 @@
+$testvar: green;
+$cvet-tvoey-mama: red;
+
+body {
+	background-color: $cvet-tvoey-mama;
+	color: $testvar;  
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}      
