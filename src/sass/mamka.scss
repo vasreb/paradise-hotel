@@ -11,3 +11,10 @@ $margin-color: #fff;
 		position: absolute;
 	}
 }
+
+
+@media screen and (max-width: 200px) {
+	b {
+		font-size: 18px;
+	}
+}

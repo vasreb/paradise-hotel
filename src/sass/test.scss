@@ -8,3 +8,9 @@ body {
 	flex-direction: row;
 	justify-content: center;
 }      
+
+@media screen and (max-width: 200px) {
+	html {
+		font-size: 15px;
+	}
+}

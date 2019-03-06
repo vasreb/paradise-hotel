@@ -1,22 +1,38 @@
-var gulp = require ("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var browserSync = require("browser-sync").create();
-var uglify = require("gulp-uglify");
-var del = require("del");
+var gulp = require ("gulp"); //taskrunner
+var sass = require("gulp-sass"); //SASS compilator
+var plumber = require("gulp-plumber"); //error detector
+var browserSync = require("browser-sync").create(); //server
+var uglify = require("gulp-uglify"); // js compresser
+var del = require("del"); //deleter
+var autoprefixier = require("gulp-autoprefixer"); //autoprefixer
+var cleanCss = require("gulp-clean-css"); // css compresser
+var imageMin = require("gulp-imagemin"); // image compresser
+var webp = require("gulp-webp"); // нужен дебильный win10
+var svg = require("gulp-svgstore"); // svg compilator
+var rename = require("gulp-rename"); // renamer
 
-//компиляция стилей SCSS
+//style compilation SCSS
 
 function compilStyles() {
 return gulp.src("./src/sass/style.scss")
 		.pipe(plumber())
 		.pipe(sass())
+
+		.pipe(autoprefixier({
+			browsers: ['> 0.1%'],
+			cascade: false
+		}))
+
+		.pipe(cleanCss({
+			level: 2
+		}))
+
+
 		.pipe(gulp.dest("./build/css"))
 		.pipe(browserSync.stream());
-
 }
 
-//компиляция скриптов 
+//JS compil
 
 function compilScript() {
 return gulp.src("./src/js/*.js")
@@ -27,7 +43,7 @@ return gulp.src("./src/js/*.js")
 		.pipe(browserSync.stream());
 }
 
-//отслеживание изменений -> компил + сервер бровзерсинк
+//if sass changed -> compilation + reload page (browsersync)
 
 function watch() {
 	browserSync.init({
@@ -41,26 +57,54 @@ function watch() {
 	gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
-//чисти
+//img compresser
+
+function compilImages() {
+	return gulp.src('./src/images/*')
+        	.pipe(imageMin({
+        			optimizationLevel: 3,
+        			progressive: true
+        		}
+        		))
+      //  	.pipe(webp())
+        	.pipe(gulp.dest('build/images'))
+}
+
+//compil svg sprite
+
+function svgSprite() { 
+	return gulp.src('./src/images/icon-*.svg')
+			.pipe(svg({
+				inlineSvg: true
+			}))
+			.pipe(rename("sprite.svg"))
+			.pipe(gulp.dest("build/images/"))
+}
+
+//epifan
 
 function clean() {
 	return del(['build/*']);
 }
 
-//непосредственно таски
+//tasks
 
 gulp.task("compilStyles", compilStyles);
 gulp.task("compilScript", compilScript);
 gulp.task("watch", watch);
 gulp.task("clean", clean);
+gulp.task("compilImages", compilImages);
+gulp.task("svgSprite", svgSprite)
 
-
-//билд: чистит билд и собирает заново стили и жс
+//build
 
 gulp.task('build', gulp.series('clean', 
-								gulp.parallel('compilStyles', 'compilScript')));
+			  gulp.parallel('compilStyles', 
+							'compilScript', 
+							'compilImages', 
+							'svgSprite')));
 
 
-//девелопмент запускает билд, потом вотч (с сервером)
+//devmode: build, after watch
 
 gulp.task('dev', gulp.series('build', 'watch'));
