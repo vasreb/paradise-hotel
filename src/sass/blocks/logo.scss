@@ -1,0 +1,58 @@
+
+.logo {
+	width: 165px;
+	height: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 3px;
+ }
+
+.logo__top-line {
+	height: 1px;
+	width: 158px;
+	background-color: $line-grey;
+	
+}
+
+.logo__text {
+	margin-top: 3px; 
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-family: 'DaxCondensed Light';
+	font-size: 28px;
+	color: #fff;
+	font-weight: 200;
+	white-space: nowrap;
+}
+
+
+.logo__stars-line {
+	position: relative;
+	width: 54px;
+	height: 8px;
+	background-image: url("../images/stars.svg");
+	background-repeat: no-repeat;
+	background-position: 0.5px 0px;
+
+	&::after {
+		content: "";
+		width: 49px;
+		height: 1px;
+		position: absolute;
+		left: (54px + 4px);
+		top: 4px;
+		background-color: $line-grey;
+	}
+
+	&::before {
+		content: "";
+		width: 49px;
+		height: 1px;
+		position: absolute;
+		right: (54px + 4px);
+		top: 4px;
+		background-color: $line-grey;
+	}
+} 
+

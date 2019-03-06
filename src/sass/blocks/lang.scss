@@ -1,0 +1,24 @@
+.lang {
+	height: 13px;
+	width: 30px;
+	display: flex;
+	flex-direction: row;
+}
+
+.lang__current {
+	font-size: 13px;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'OpenSans Light';
+ 	&::after {
+ 		position: absolute;
+ 		content: "";
+		width: 10px;
+		height: 5px;
+		background-image: url("../images/select.png");
+		background-repeat: no-repeat;
+		top: 5px;
+		right: -15px;
+	} 
+} 

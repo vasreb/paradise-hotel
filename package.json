@@ -1,14 +1,21 @@
 {
 	"name": "hotel",
 	"version": "1.0.0",
-	"dependencies": {},
+	"dependencies": {
+		"normalize.css": "^8.0.1"
+	},
 	"devDependencies": {
 		"autoprefixer": "^9.4.10",
+		"brew": "0.0.8",
 		"browser-sync": "^2.26.3",
 		"del": "^4.0.0",
+		"fontforge": "0.0.4",
+		"fontmin": "^0.9.7-beta",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^6.0.0",
 		"gulp-clean-css": "^4.0.0",
+		"gulp-fontgen": "^0.2.5",
+		"gulp-fontmin": "^0.7.4",
 		"gulp-imagemin": "^5.0.3",
 		"gulp-plumber": "^1.2.1",
 		"gulp-rename": "^1.4.0",

@@ -11,6 +11,16 @@ var webp = require("gulp-webp"); // нужен дебильный win10
 var svg = require("gulp-svgstore"); // svg compilator
 var rename = require("gulp-rename"); // renamer
 
+//copy 
+function copy() {
+return gulp.src([
+          "fonts/**/*.{woff,woff2,ttf,otf}",
+     ], {
+       base: "."
+     })
+     .pipe(gulp.dest("build"));
+}
+
 //style compilation SCSS
 
 function compilStyles() {
@@ -50,9 +60,9 @@ function watch() {
         server: {
             baseDir: "./"
         },
-        tunnel: true
     });
 
+    gulp.watch("./fonts/*.{ttf, otf, woff, woff2}", copy);
 	gulp.watch("./src/sass/**/*.{scss, sass}", compilStyles);
 	gulp.watch("./*.html").on('change', browserSync.reload);
 }
@@ -81,11 +91,16 @@ function svgSprite() {
 			.pipe(gulp.dest("build/images/"))
 }
 
+//fonts compil to woff
+
+
 //epifan
 
 function clean() {
 	return del(['build/*']);
 }
+
+
 
 //tasks
 
@@ -94,7 +109,8 @@ gulp.task("compilScript", compilScript);
 gulp.task("watch", watch);
 gulp.task("clean", clean);
 gulp.task("compilImages", compilImages);
-gulp.task("svgSprite", svgSprite)
+gulp.task("svgSprite", svgSprite);
+gulp.task("copy", copy);
 
 //build
 
@@ -102,7 +118,8 @@ gulp.task('build', gulp.series('clean',
 			  gulp.parallel('compilStyles', 
 							'compilScript', 
 							'compilImages', 
-							'svgSprite')));
+							'svgSprite',
+							'copy')));
 
 
 //devmode: build, after watch

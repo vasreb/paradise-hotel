@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	height: 90px;
+	width: 100%;
+	background-color: rgb(25,25,25);
+} 
+
+.header__wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 980px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+

@@ -1,2 +1,9 @@
-@import "test.scss";
-@import "mamka.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.css";
+@import "fonts.scss";
+
+@import "blocks/logo.scss";
+@import "blocks/header.scss";
+@import "blocks/nav-list.scss";
+@import "blocks/lang.scss";
