@@ -1,18 +1,74 @@
 .header {
-	display: flex;
-	flex-direction: row;
-	height: 90px;
 	width: 100%;
 	background-color: rgb(25,25,25);
 } 
 
 .header__wrapper {
+	height: 90px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 980px;
+	width: $PC-wrap;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
 
+.header__space {
+	height: 170px;
+	background: linear-gradient(0deg, rgb(172, 172, 172) 0%, 
+		rgb(172, 172, 172) 0.5%, rgb(189, 189, 189) 0.5%, rgb(206, 206, 206) 62%, 
+		rgb(189, 189, 189) 99%, rgb(196, 196, 196) 99%, rgb(196, 196, 196) 100% );
+	padding-top: 122px;
+	box-sizing: border-box;
+}
+
+.header__title-container {
+	height: 48px;
+	width: 193px;
+	background-color: $main-blue;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		right: -18px;
+		border-top: 48px solid $main-blue; 
+		border-right: 18px solid transparent;	
+	}
+
+}
+
+.header__title {
+	font-family: "DaxCondensed Light";
+	@include sharpfont;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+	flex-shrink: 0;
+}
+ 
+
+.header__title-wrap {
+	width: $PC-wrap;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 0;
+	position: relative;
+ }
+
+.header__pseudo-title {
+	height: 48px;
+	background-color: $main-blue;
+	position: absolute;
+	left: -9999px;
+	width: 9999px; //поехавший костыль, потом переделать
+	z-index: 0;
+}

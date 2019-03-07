@@ -3,7 +3,11 @@
 @import "normalize.css";
 @import "fonts.scss";
 
+@import "blocks/body.scss";
 @import "blocks/logo.scss";
 @import "blocks/header.scss";
 @import "blocks/nav-list.scss";
 @import "blocks/lang.scss";
+@import "blocks/sub-menu.scss";
+@import "blocks/sub-menu-list.scss";
+@import "blocks/main-content.scss";

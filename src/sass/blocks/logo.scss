@@ -22,7 +22,7 @@
 	font-family: 'DaxCondensed Light';
 	font-size: 28px;
 	color: #fff;
-	font-weight: 200;
+	@include sharpfont;
 	white-space: nowrap;
 }
 
