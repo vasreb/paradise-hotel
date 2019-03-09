@@ -31,7 +31,7 @@
 	margin-right: auto;
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mobile-width) {
 	
 	.page-content {
 		width: auto;
@@ -40,4 +40,4 @@
 		width: auto;
 	}
 
-	}
+}

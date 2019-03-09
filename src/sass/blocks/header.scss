@@ -88,7 +88,7 @@
 }
 
 
-@media (max-width: 520px) {
+@media (max-width: $mobile-width) {
 	.header__wrapper {
 		width: 100%;
 		height: auto;

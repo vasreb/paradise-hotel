@@ -9,7 +9,7 @@
 	width: $PC-wrap;
 }
 
-@media (max-width: 520px) { 
+@media (max-width: $mobile-width) { 
 
 	.h-separ {
 		width: auto;

@@ -16,7 +16,7 @@
 	margin-top: 9px;
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mobile-width) {
 	
 	.page-info {
 	width: auto;

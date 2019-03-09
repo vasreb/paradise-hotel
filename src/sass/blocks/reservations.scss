@@ -35,7 +35,7 @@
 	margin-top: 12px;
 }
 
-@media (max-width: 520px) { 
+@media (max-width: $mobile-width) { 
 	.reservations__date {
 		width: 40%;
 	}

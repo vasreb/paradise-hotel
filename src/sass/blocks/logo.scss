@@ -57,3 +57,26 @@
 	}
 } 
 
+
+@media (max-width: $mobile-width) {
+	.logo {
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	}
+
+	.logo__top-line {
+		width: 260px;
+	}
+	.logo__stars-line {
+		&::after {
+			width: 100px;
+		}
+		&::before {
+			width: 100px;
+		}
+	}
+	.logo__text {
+		font-size: 50px;
+	}
+}

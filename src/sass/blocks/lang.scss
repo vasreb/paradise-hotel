@@ -23,7 +23,7 @@
 	} 
 } 
 
-@media (max-width: 520px) { 
+@media (max-width: $mobile-width) { 
 
 	.lang {
 	height: 40px;

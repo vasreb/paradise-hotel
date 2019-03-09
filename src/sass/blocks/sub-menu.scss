@@ -39,7 +39,7 @@
 	margin-right: auto;
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mobile-width) {
 	.sub-menu { 
 	background-color: rgb(251, 251, 251);
 	

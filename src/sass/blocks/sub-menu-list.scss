@@ -24,7 +24,7 @@
 	font-family: "OpenSans Bold";
 }
 
-@media (max-width: 520px) {
+@media (max-width: $mobile-width) {
 	
 	.sub-menu-list {
 
