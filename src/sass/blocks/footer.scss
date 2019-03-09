@@ -1,0 +1,26 @@
+.footer {
+	height: 66px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.footer__wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: $PC-wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer__menu {
+	width: 284px;
+	margin-bottom: 6px;
+	margin-right: 5px;
+}
+
+.footer__social {
+	margin-left: 6px;
+}

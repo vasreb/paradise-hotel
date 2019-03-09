@@ -16,10 +16,17 @@
 
 
 .our-hotel__text {
-	margin-top: 20px;
-	margin-bottom: 30px;
+	padding-left: 1px;
+	margin-top: 11px;
+	margin-bottom: 20px;
 }
 
 .our-hotel__text--last {
 	margin-bottom: 0px;
+}
+
+.our-hotel__strong {
+	font-family: "OpenSans Bold";
+	text-transform: uppercase;
+	font-weight: 700;
 }

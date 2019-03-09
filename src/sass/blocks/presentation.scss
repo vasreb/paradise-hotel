@@ -17,8 +17,13 @@
 .presentation__item {
 	margin-top: 35px;
 	margin-bottom: 35px;
+	margin-left: 1px;
 }
 
 .presentation__item--first {
-	margin-top: 40px;
+	margin-top: 35px;
+}
+
+.presentation__item--last {
+	margin-bottom: 0px;
 }

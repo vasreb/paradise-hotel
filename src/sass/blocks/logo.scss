@@ -17,14 +17,15 @@
 
 .logo__text {
 	margin-top: 3px; 
-	margin-bottom: 3px;
+	margin-bottom: 0px;
 	text-transform: uppercase;
 	font-family: 'DaxCondensed Light';
 	font-size: 28px;
 	color: #fff;
 	@include sharpfont;
 	white-space: nowrap;
-}
+	font-stretch: condensed;
+} 
 
 
 .logo__stars-line {

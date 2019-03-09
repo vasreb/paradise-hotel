@@ -9,7 +9,8 @@
 
 .contact__text {
 	margin: 0;
-	padding-left: 1px;
+	padding-top: 3px;
+	padding-left: 2px;
 }
 
 .contact__icon {
@@ -18,9 +19,10 @@
 }
 
 .contact__icon--telephone {
-	height: 25px;
+	height: 21px;
 	width: 15px;
-	margin-right: 4px;
+	margin-right: 5px;
+	padding-top: 3px;
 }
 
 .contact__icon--chat {
@@ -33,4 +35,8 @@
 	height: 13px;
 	width: 21px;
 	margin-right: 1px;
+}
+
+.contact__text--mail {
+	margin-top: -4px;
 }
