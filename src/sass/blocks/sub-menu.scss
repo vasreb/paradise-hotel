@@ -3,7 +3,7 @@
 	position: relative;
 	height: 51px;
 	background-image: linear-gradient(left, transparent 0%, 
-		rgb(251, 251, 251) 30%, rgb(251, 251, 251), rgb(251, 251, 251) 60%, transparent 100%);
+		rgb(251, 251, 251) 20%, rgb(251, 251, 251), rgb(251, 251, 251) 70%, transparent 100%);
 	&::before {
 	content: "";
 	height: 1px;
@@ -26,3 +26,15 @@
 	}
 }
 
+.sub-menu--map {
+	position: absolute;
+	&::after {
+		box-shadow: none;
+	}
+}
+
+.sub-menu__absolute-wrapper {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
