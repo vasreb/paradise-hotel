@@ -2,6 +2,5 @@
 
 
 # Ignore (generated) files
-/build/
 /node_modules/
 package-lock.json
