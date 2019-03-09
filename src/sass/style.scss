@@ -3,6 +3,8 @@
 @import "normalize.css";
 @import "fonts.scss";
 
+@import "blocks/text.scss";
+@import "blocks/h4.scss";
 @import "blocks/body.scss";
 @import "blocks/logo.scss";
 @import "blocks/header.scss";
@@ -10,4 +12,16 @@
 @import "blocks/lang.scss";
 @import "blocks/sub-menu.scss";
 @import "blocks/sub-menu-list.scss";
-@import "blocks/main-content.scss";
+@import "blocks/page-content.scss";
+@import "blocks/page-info.scss";
+@import "blocks/main.scss";
+@import "blocks/sidebar.scss";
+@import "blocks/our-hotel.scss";
+@import "blocks/presentation.scss";
+@import "blocks/photo-n-text.scss";
+@import "blocks/search.scss";
+@import "blocks/input.scss";
+@import "blocks/reservations.scss";
+@import "blocks/button-submit.scss";
+@import "blocks/contact.scss";
+@import "blocks/contact-us.scss";

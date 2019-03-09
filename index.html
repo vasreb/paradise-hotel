@@ -41,16 +41,15 @@
 			<div class="header__title-wrap">
 				<div class="header__pseudo-title"></div>
 				<div class="header__title-container">
-					<h1 class="header__title">About Paradise Hotel</h1>
+					<h2 class="header__title">About Paradise Hotel</h2>
 				</div>
 			</div>
 	</div>
 	</header>
 
-	<main class="main-content">
-	<div class="main-content__wrapper">
-		<div class="sub-menu__border">
-		<nav class="sub-menu main-content__sub-menu">
+	<div class="page-content">
+		<!-- sub menu -->
+		<nav class="sub-menu page-content__sub-menu">
 			<div class="sub-menu-list">
 				<li class="sub-menu-list__item">
 					<a class="sub-menu-list__link sub-menu-list__link--selected" href="#">Overview</a>
@@ -69,8 +68,101 @@
 				</li>
 			</div>
 		</nav>
+		
+		<div class="page-info page-content__page-info">
+			<main class="main page-info__main">
+				<article class="our-hotel main__our-hotel">
+					<header class="our-hotel__header">
+						<h3 class="our-hotel__header-text">Our hotel <strong class="our-hotel__strong">Paradise</strong></h3>
+					</header>
+					<p class="text our-hotel__text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt suscipit, iusto ex cum dolorem asperiores commodi esse voluptas, architecto voluptatem facilis tenetur nihil laudantium. Laudantium qui deleniti illo molestias. Magni numquam dicta provident eligendi aliquam nobis laborum minus possimus odit, quibusdam placeat facere, similique delectus ut? Alias suscipit eaque, aliquid nisi. pedicabo ego vos et irrumabo sit amet, consectetur adipisicing elit. Magni numquam dicta provident eligendi aliquam nobis laborum minus possimus odit, quibusdam placeat facere, similique delectus ut? Alias suscipit eaque, aliquid nisi.
+					</p>
+					<p class="text our-hotel__text--last">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni numquam dicta provident eligendi aliquam nobis laborum minus possimus odit, quibusdam placeat facere, similique delectus ut? Alias suscipit eaque, aliquid nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</article>
+				<div class="main__h-separ"></div>
+				<section class="presentation main__presentation">
+					<header class="presentation__header">
+						<h3 class="presentation__header-text">Class aptent taciti sociosqu</h3>
+					</header>
+					<article class="presentation__item presentation__item--first photo-n-text">
+						<figure class="photo-n-text__image">
+							<img class="photo-n-text__image-content" src="" alt="photo">
+						</figure>
+						<p class="text photo-n-text__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda officia voluptates, magnam necessitatibus, sequi tempore quidem voluptatem dolore error iusto itaque! Voluptatibus, adipisci eaque a voluptatem officia soluta tempore illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias inventore adipisci velit nemo magnam nisi id eveniet nobis reiciendis tempora. 
+						</p>
+					</article>
+					<article class="presentation__item photo-n-text">
+						<figure class="photo-n-text__image">
+							<img class="photo-n-text__image-content" src="" alt="photo">
+						</figure>
+						<p class="text photo-n-text__text">
+							Ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem assumenda, sint autem qui ducimus, aut aperiam tempore, iure ad similique facere fugiat perspiciatis consequuntur atque quis in. In, voluptates. sint autem qui ducimus, aut aperiam tempore, iure ad similique facere fugiat perspiciatis.
+						</p>
+					</article>
+				</section>
+			</main>
+			<div class="page-info__v-separ"></div>
+			<aside class="sidebar page-info__sidebar">
+				<div class="search">
+					<form action="#">
+						<h4 class="search__h h4">
+						Search
+						</h4>
+						<div class="input__container search__input">
+							<input type="text" class="input" placeholder="Search...">
+							 <svg class="input__icon">
+      							<use xlink:href="build/images/sprite.svg#icon-lupa" />
+   							 </svg>
+						</div>						
+					</form>
+				</div>
+				<div class="reservations sidebar__reservations">
+					<h4 class="reservations__h h4">
+						Reservations
+					</h4>
+					<p class="reservations__desc text">Request a reservation. We will come back to you shortly.</p>
+					<form>
+						<select class="input reservations__select">
+   							<option class="reservations__select" value="" disabled selected >Select a Room...</option>
+   							<option class="reservations__select" value="test">test</option>
+						</select>
+						<input class="reservations__date reservations__date--from input" type="date">
+						<input class="reservations__date reservations__date--to input" type="date">
+						<input class="reservations__submit button-submit" type="submit" value="Book now">
+					</form>
+				</div>
+				<div class="contact-us sidebar__contact-us">
+					<h4 class="h4">Contact us</h4>
+					<div class="contact">
+						<p class="text contact__text">02/555 333 22</p>
+						<svg class="contact__icon contact__icon--telephone">
+      						<use xlink:href="build/images/sprite.svg#icon-telephone" />
+   						</svg>
+					</div>
+					<div class="contact-us__separ"></div>
+					<div class="contact">
+						<p class="text contact__text">Live Chat</p>
+						<svg class="contact__icon contact__icon--chat">
+      						<use xlink:href="build/images/sprite.svg#icon-chat" />
+   						</svg>
+					</div>
+					<div class="contact-us__separ"></div>
+					<div class="contact">
+						<p class="text contact__text">vasreborn@gmail.com</p>
+						<svg class="contact__icon contact__icon--mail">
+      						<use xlink:href="build/images/sprite.svg#icon-mail" />
+   						</svg>
+					</div>
+
+				</div>
+			</aside>
 		</div>
+
 	</div>
-	</main>
+
 </body>
 </html>

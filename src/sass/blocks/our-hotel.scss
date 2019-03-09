@@ -1,0 +1,25 @@
+.our-hotel {
+	width: 100%;
+}
+
+.our-hotel__header {
+
+}
+
+.our-hotel__header-text {
+	font-family: "OpenSans Light";
+	@include sharpfont;
+	font-size: 25px;
+	margin: 0;
+	color: rgb(55, 53, 53);
+} 
+
+
+.our-hotel__text {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.our-hotel__text--last {
+	margin-bottom: 0px;
+}

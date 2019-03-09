@@ -1,0 +1,16 @@
+.page-info {
+	width: $PC-wrap;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.page-info__v-separ {
+	height: 593px;
+	width: 1px;
+	background-color: rgb(205, 205, 205);
+	margin-right: 30px;
+	margin-left: auto;
+}

@@ -1,0 +1,24 @@
+.presentation {
+	width: 100%;
+}
+
+.presentation__header {
+
+}
+
+.presentation__header-text {
+	font-family: "OpenSans Light";
+	@include sharpfont;
+	font-size: 20px;
+	margin: 0;
+	color: rgb(55, 53, 53);
+}
+
+.presentation__item {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.presentation__item--first {
+	margin-top: 40px;
+}

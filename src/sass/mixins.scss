@@ -3,3 +3,9 @@
 font-weight:  200;
 
 }
+
+@mixin placeholder {
+	font-family: "OpenSans Regular";
+	font-size: 13px;
+	padding: 7px;
+}

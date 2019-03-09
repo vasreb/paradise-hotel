@@ -9,6 +9,7 @@ var cleanCss = require("gulp-clean-css"); // css compresser
 var imageMin = require("gulp-imagemin"); // image compresser
 var webp = require("gulp-webp"); // нужен дебильный win10
 var svg = require("gulp-svgstore"); // svg compilator
+var svgMin = require("gulp-svgmin"); // svg minimizer
 var rename = require("gulp-rename"); // renamer
 
 //copy 
@@ -83,12 +84,12 @@ function compilImages() {
 //compil svg sprite
 
 function svgSprite() { 
-	return gulp.src('./src/images/icon-*.svg')
-			.pipe(svg({
-				inlineSvg: true
-			}))
+	return gulp
+			.src('./src/images/icon-*.svg')
+			.pipe(svgMin())
+			.pipe(svg())
 			.pipe(rename("sprite.svg"))
-			.pipe(gulp.dest("build/images/"))
+			.pipe(gulp.dest("build/images"))
 }
 
 //fonts compil to woff

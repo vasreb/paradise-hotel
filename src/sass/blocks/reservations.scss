@@ -1,0 +1,34 @@
+.reservations__h {
+	
+}
+
+.reservations__desc {
+	padding-left: 2px;
+	margin-bottom: 15px;
+}
+
+
+.reservations__date {
+	width: 99px;
+}
+
+.reservations__date--from {
+	float: left;
+	padding: 0;
+	@include placeholder;
+}
+
+.reservations__date--to {
+	float: right;
+	padding: 0;
+	@include placeholder;
+}
+
+.reservations__select {
+	margin-bottom: 10px;
+	@include placeholder;
+}
+
+.reservations__submit {
+	margin-top: 10px;
+}
