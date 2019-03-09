@@ -24,3 +24,23 @@
 .footer__social {
 	margin-left: 6px;
 }
+
+@media (max-width: 520px) {
+
+	.footer {
+		height: auto;
+	}
+	.footer__wrapper {
+		flex-wrap: wrap;
+		width: 50%;
+	}
+	.footer__menu {
+		display: none;
+	}
+	.footer__social {
+	margin-right: auto;
+	margin-left: auto;
+	order: -1;
+	padding-top: 10px;
+	}
+}

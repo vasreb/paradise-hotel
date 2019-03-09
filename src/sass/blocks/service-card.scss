@@ -1,0 +1,65 @@
+.service-card {
+	flex-basis: 300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.service-card__video {
+	position: relative;
+	height: 149px;
+	width: 100%;
+	border-radius: 3px;
+	background-color: rgb(252, 253, 255);
+	margin-bottom: 23px;
+	border: 1px solid #d8d9db;
+
+	transition: all 0.5s 0.1s;
+
+	&:hover {
+		background-color: #323333;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		height: 35px;
+		width: 32px;
+		background-image: url('./../images/play-icon.svg');
+		background-repeat: no-repeat; 
+		left: 0; 
+ 		right: 0; 
+ 		margin-left: auto; 
+ 		margin-right: auto; 
+ 		top: 0;
+ 		bottom: 0;
+ 		margin-top: auto;
+ 		margin-bottom: auto;
+ 		opacity: 0;
+ 		transition: all 0.5s 0.1s;
+	}
+
+	&:hover::after {
+	opacity: 1;
+	}
+}
+
+.service-card__h {
+	font-family: "OpenSans Light";
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.service-card-desc {
+	margin-bottom: 51px;
+	line-height: 17px;
+}
+
+.service-card__video-thumbnail {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.service-card--mini {
+	flex-basis: 198px;
+}

@@ -12,3 +12,32 @@
 .page-content {
 	position: relative;
 }
+
+.page-content__center-text {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.page-content__h-separ {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 54px;
+	margin-bottom: 50px;
+}
+
+.page-content__services-container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 520px) {
+	
+	.page-content {
+		width: auto;
+	}
+	.page-content__sub-menu {
+		width: auto;
+	}
+
+	}

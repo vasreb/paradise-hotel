@@ -1,0 +1,104 @@
+.text-icon {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 39px;
+}
+
+.text-icon__text {
+	margin: 0;
+	padding-top: 3px;
+	padding-left: 2px;
+}
+
+.text-icon__icon {
+	height: 25px;
+	width: 28px;
+	background-repeat: no-repeat;
+	flex-basis: 28px;
+	flex-shrink: 0;
+	transition: all 0.3s;
+}
+
+.text-icon:hover .text-icon__icon {
+	background-image: url("/../build/images/room-icons-blue.png");
+}
+
+.text-icon__icon--telephone {
+	height: 22px;
+	width: 10px;
+	padding-top: 5px;
+	margin-right: -7px;
+}
+
+.text-icon__icon--chat {
+	height: 16px;
+	width: 23px;
+	margin-bottom: 1px;
+	margin-right: -5px;
+}
+
+.text-icon__icon--mail {
+	height: 13px;
+	width: 21px;
+	margin-right: -4px;
+	margin-top: -2px;
+}
+
+.text-icon__separ {
+	height: 1px;
+	width: 100%;
+	background-color: rgb(205, 205, 205);
+	margin-top: 1px;
+}
+
+.text-icon__icon--wifi {
+	background-image: url("/../build/images/room-icons.png");
+
+	background-position: 0px 0px;
+}
+
+
+
+.text-icon__icon--health {
+	width: 36px;
+	height: 20px;
+	background-image: url("/../build/images/room-icons.png");
+
+	background-position: 0px -22px;
+}
+
+.text-icon__icon--water {
+	width: 35px;
+	height: 20px;
+	background-image: url("/../build/images/room-icons.png");
+
+	background-position: 0px -44px;
+
+}
+
+.text-icon__icon--service {
+	width: 35px;
+	height: 20px;
+	background-image: url("/../build/images/room-icons.png");
+	
+	background-position: 0px -66px;
+	
+}
+
+.text-icon__icon--minibar {
+
+	height: 20px;
+	background-image: url("/../build/images/room-icons.png");
+	background-position: 0px -92px;
+}
+
+.text-icon__icon--dinner {
+	width: 35px;
+	height: 20px;
+	background-image: url("/../build/images/room-icons.png");
+	background-position: 0px -120px;
+	
+}

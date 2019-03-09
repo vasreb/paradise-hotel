@@ -1,0 +1,18 @@
+.h-separ {
+	width: 666px;
+	height: 1px;
+	background-image: url('../images/dash-separator.png');
+	background-position: 2px 0px;
+}
+
+.h-separ--wrap {
+	width: $PC-wrap;
+}
+
+@media (max-width: 520px) { 
+
+	.h-separ {
+		width: auto;
+	}
+
+	}

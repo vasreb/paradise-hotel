@@ -34,3 +34,9 @@
 .reservations__submit {
 	margin-top: 12px;
 }
+
+@media (max-width: 520px) { 
+	.reservations__date {
+		width: 40%;
+	}
+}

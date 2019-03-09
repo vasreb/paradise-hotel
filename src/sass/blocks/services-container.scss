@@ -1,0 +1,11 @@
+.services-container {
+	width: $PC-wrap;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.services-container--mini {
+	width: 100%;
+}

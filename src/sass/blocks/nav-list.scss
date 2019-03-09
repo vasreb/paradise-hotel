@@ -5,6 +5,7 @@
 	flex-direction: row;
 }
 
+
 .nav-list__link {
 	color: #fff;
 	text-decoration: none;
@@ -54,4 +55,20 @@
 	}
 	margin-left: 8px;
 	margin-right: 9px;
+}
+
+@media (max-width: 520px) {
+	.nav-list {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-list__item {
+		&::before {
+		display: none;
+		}
+	}
+	.nav-list__link {
+		font-size: 20px;
+	}
 }

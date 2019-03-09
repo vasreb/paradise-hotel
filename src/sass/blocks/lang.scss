@@ -22,3 +22,29 @@
 		right: -16px;
 	} 
 } 
+
+@media (max-width: 520px) { 
+
+	.lang {
+	height: 40px;
+	}
+
+
+	.lang__current {
+
+		font-size: 20px;
+
+		&::after {
+ 		position: absolute;
+ 		content: "";
+		width: 10px;
+		height: 5px;
+		background-image: url("../images/select.png");
+		background-repeat: no-repeat;
+		top: 10px;
+		right: -15px;
+
+	} 
+
+	}
+}

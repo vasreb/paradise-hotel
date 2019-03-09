@@ -4,11 +4,16 @@
 	flex-direction: column;
 }
 
+
 .main__h-separ {
-	width: 666px;
-	height: 1px;
-	background-image: url('../images/dash-separator.png');
 	margin-top: 35px; 
 	margin-bottom: 35px; 
-	background-position: 2px 0px;
 }
+
+@media (max-width: 520px) { 
+
+	.main {
+		width: auto;
+	}
+
+	}

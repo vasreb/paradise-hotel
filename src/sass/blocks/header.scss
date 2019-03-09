@@ -3,6 +3,8 @@
 	background-color: rgb(25,25,25);
 } 
 
+
+
 .header__wrapper {
 	height: 90px;
 	margin-left: auto;
@@ -10,12 +12,16 @@
 	width: $PC-wrap;
 	display: flex;
 	flex-direction: row;
+
 	align-items: center;
 	justify-content: space-between;
 }
 
+
+
 .header__space {
 	height: 170px;
+	width: 100%;
 	background: linear-gradient(0deg, rgb(172, 172, 172) 0%, 
 		rgb(172, 172, 172) 0.5%, rgb(189, 189, 189) 0.5%, rgb(206, 206, 206) 62%, 
 		rgb(189, 189, 189) 99%, rgb(196, 196, 196) 99%, rgb(196, 196, 196) 100% );
@@ -79,4 +85,39 @@
 
 .header__lang {
 	margin-right: 2px;
+}
+
+
+@media (max-width: 520px) {
+	.header__wrapper {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.header__title-container {
+		width: auto;
+		&::after {
+		display: none;
+	}
+	}
+
+	.header__pseudo-title {
+		display: none;
+	} 
+
+	.header__title {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.header__title-wrap {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 0;
+	position: relative;
+ }
 }

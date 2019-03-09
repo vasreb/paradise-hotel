@@ -23,3 +23,19 @@
 .sub-menu-list__link--selected {
 	font-family: "OpenSans Bold";
 }
+
+@media (max-width: 520px) {
+	
+	.sub-menu-list {
+
+	height: auto;
+	flex-wrap: wrap;
+
+	}
+	.sub-menu-list__item {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+
+}

@@ -3,3 +3,10 @@
 	line-height: 17px;
 	color: rgb(155, 154, 154);
 }
+
+@media (max-width: 520px) {
+	.copyright {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+}
