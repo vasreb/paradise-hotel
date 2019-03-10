@@ -50,7 +50,7 @@
 	</header>
 
 	<div class="page-content page__page-content">
-		<!-- sub menu -->
+	<div class="page-content__indent">
 
 		<nav class="sub-menu page-content__sub-menu">
 			<ul class="sub-menu-list">
@@ -99,7 +99,7 @@
 						</div>
 					</div>
 
-					<div class="service-card services-container__item service-card--mini">
+					<div class="service-card services-container__item service-card--mini services-container__item--last">
 						<div class="service-card__video">
 							<img src="#" alt="Service thumbnail" class="service-card__video-thumbnail">
 						</div>
@@ -161,13 +161,16 @@
    							<option class="reservations__select" value="" disabled selected >Select a Room...</option>
    							<option class="reservations__select" value="test">test</option>
 						</select>
-						<input class="reservations__date reservations__date--from input" type="date">
-						<input class="reservations__date reservations__date--to input" type="date">
+						<div class="reservations__container">
+							<input class="reservations__date reservations__date--from input" type="date">
+							<input class="reservations__date reservations__date--to input" type="date">
+						</div>
 						<input class="reservations__submit button-submit" type="submit" value="Book now">
 					</form>
 				</div>
 			</aside>
 		</div>
+	</div>
 	</div>
 
 	<footer class="footer">
