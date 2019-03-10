@@ -1,6 +1,4 @@
 .photo-n-text {
-	display: flex;
-	flex-direction: row;
 	width: 100%;
 	align-items: flex-start;
 }
@@ -11,9 +9,12 @@
 	background-color: rgb(252, 253, 255);
 	margin: 0;
 	flex-shrink: 0;
+	margin-top: 5px;
 	margin-right: 24px;
+	margin-bottom: 15px;
 	border-radius: 3px;
 	border: 1px solid #d8d9db;
+	float: left;
 }
 
 .photo-n-text__image-content {

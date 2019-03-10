@@ -1,12 +1,12 @@
-.our-hotel {
+.narrative {
 	width: 100%;
 }
 
-.our-hotel__header {
+.narrative__header {
 
 }
 
-.our-hotel__header-text {
+.narrative__header-text {
 	font-family: "OpenSans Light";
 	@include sharpfont;
 	font-size: 25px;
@@ -15,17 +15,17 @@
 } 
 
 
-.our-hotel__text {
+.narrative__text {
 	padding-left: 1px;
 	margin-top: 11px;
 	margin-bottom: 20px;
 }
 
-.our-hotel__text--last {
+.narrative__text--last {
 	margin-bottom: 0px;
 }
 
-.our-hotel__strong {
+.narrative__strong {
 	font-family: "OpenSans Bold";
 	font-weight: 700;
 } 

@@ -1,5 +1,5 @@
 .main {
-	width: 672px;
+	width: 68.5%;
 	display: flex;
 	flex-direction: column;
 }
@@ -10,10 +10,13 @@
 	margin-bottom: 35px; 
 }
 
+.main__narrative {
+	
+}
+
 @media (max-width: $mobile-width) { 
 
 	.main {
 		width: auto;
 	}
-
-	}
+}

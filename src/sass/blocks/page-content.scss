@@ -1,11 +1,15 @@
 
 .page-content__sub-menu {
-	width: $PC-wrap;
+	max-width: $PC-wrap;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.page-content__page-info {
+.page-content__indent {
+	padding: 0 15px;
+}
+
+.page-content__horizontal-flex {
 	margin-top: 41px;
 }
 

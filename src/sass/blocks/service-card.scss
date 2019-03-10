@@ -1,5 +1,6 @@
 .service-card {
-	flex-basis: 300px;
+	max-width: 300px;
+	min-width: 300px;
 	display: flex;
 	flex-direction: column;
 }
@@ -61,5 +62,13 @@
 }
 
 .service-card--mini {
-	flex-basis: 198px;
+	max-width: 198px;
+	min-width: 198px;
+}
+
+@media (max-width: $mobile-width) {
+	.service-card-desc {
+	line-height: 25px;
+	font-size: 15px;
+	}
 }

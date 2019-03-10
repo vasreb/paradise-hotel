@@ -50,11 +50,12 @@
 	</header>
 
 	<div class="page-content page__page-content">
+	<div class="page-content__indent">
 		<!-- sub menu -->
 
 		<nav class="sub-menu page-content__sub-menu">
-			<div class="sub-menu-list">
-				<li class="sub-menu-list__item">
+			<ul class="sub-menu-list">
+				<li class="sub-menu-list__item sub-menu-list__item--first">
 					<a class="sub-menu-list__link sub-menu-list__link--selected" href="/index.html">Overview</a>
 				</li>
 				<li class="sub-menu-list__item">
@@ -66,22 +67,22 @@
 				<li class="sub-menu-list__item">
 					<a class="sub-menu-list__link" href="/hotel-services.html">Hotel Services</a>
 				</li>
-				<li class="sub-menu-list__item">
+				<li class="sub-menu-list__item sub-menu-list__item--last">
 					<a class="sub-menu-list__link" href="#">Local information</a>
 				</li>
-			</div>
+			</ul>
 		</nav>
 		
-		<div class="page-info page-content__page-info">
-			<main class="main page-info__main">
-				<article class="our-hotel main__our-hotel">
-					<header class="our-hotel__header">
-						<h3 class="our-hotel__header-text">Our hotel <strong class="our-hotel__strong">PARADISE</strong></h3>
+		<div class="horizontal-flex page-content__horizontal-flex">
+			<main class="main horizontal-flex__main">
+				<article class="narrative main__narrative">
+					<header class="narrative__header">
+						<h3 class="narrative__header-text">Our hotel <strong class="narrative__strong">PARADISE</strong></h3>
 					</header>
-					<p class="text our-hotel__text">
+					<p class="text narrative__text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nibh varius odio sollicitudin blandit nec eu elit. Suspendisse ac risus nunc, quis elementum lorem. Pellentesque vehicula egestas eros nec commodo. Phasellus adipiscing pretium sem, id congue erat fermentum at. Fusce dapibus felis non ante gravida convallis. Nullam vulputate convallis lectus in ultrices.
 					</p>
-					<p class="text our-hotel__text--last">
+					<p class="text narrative__text--last">
 						Etiam sollicitudin mattis pulvinar. Duis congue dignissim turpis, ut consectetur mauris congue a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam hendrerit, arcu a vehicula bibendum, dolor orci consectetur nisl, a imperdiet ante magna eget neque. Sed ac dolor ante. Etiam in ipsum neque, et ultricies nibh. Sed vel ultrices nulla. Maecenas nulla ipsum, bibendum sit amet tristique non, rhoncus a neque. 
 					</p>
 				</article>
@@ -92,7 +93,7 @@
 					</header>
 					<article class="presentation__item presentation__item--first photo-n-text">
 						<figure class="photo-n-text__image">
-							<img class="photo-n-text__image-content" src="" alt="photo">
+							<img class="photo-n-text__image-content" src="#" alt="photo">
 						</figure>
 						<p class="text photo-n-text__text">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nibh varius odio sollicitudin blandit nec eu elit. Suspendisse ac risus nunc, quis elementum lorem. Pellentesque vehicula egestas eros nec commodo. Phasellus adipiscing pretium sem, id congue erat fermentum at. Fusce dapibus felis non ante gravida convallis. Nullam vulputate convallis lectus in ultrices.
@@ -100,7 +101,7 @@
 					</article>
 					<article class="presentation__item photo-n-text presentation__item--last">
 						<figure class="photo-n-text__image">
-							<img class="photo-n-text__image-content" src="" alt="photo">
+							<img class="photo-n-text__image-content" src="#" alt="photo">
 						</figure>
 						<p class="text photo-n-text__text">
 							Ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nibh varius odio sollicitudin blandit nec eu elit. Suspendisse ac risus nunc, quis elementum lorem. Pellentesque vehicula egestas eros nec commodo. Phasellus adipiscing pretium sem, id congue erat fermentum at.
@@ -108,8 +109,8 @@
 					</article>
 				</section>
 			</main>
-			<div class="page-info__v-separ"></div>
-			<aside class="sidebar page-info__sidebar">
+			<div class="horizontal-flex__v-separ"></div>
+			<aside class="sidebar horizontal-flex__sidebar">
 				<div class="search sidebar__search">
 					<form action="#">
 						<h4 class="search__h h4">
@@ -133,8 +134,10 @@
    							<option class="reservations__select" value="" disabled selected >Select a Room...</option>
    							<option class="reservations__select" value="test">test</option>
 						</select>
-						<input class="reservations__date reservations__date--from input" type="date">
-						<input class="reservations__date reservations__date--to input" type="date">
+						<div class="reservations__container">
+							<input class="reservations__date reservations__date--from input" type="date">
+							<input class="reservations__date reservations__date--to input" type="date">
+						</div>
 						<input class="reservations__submit button-submit" type="submit" value="Book now">
 					</form>
 				</div>
@@ -165,9 +168,10 @@
 			</aside>
 		</div>
 	</div>
+	</div>
 	<footer class="footer">
 		<div class="footer__wrapper">
-			<p class="copyright text">© 2019 Paradise Hotel. All Rights Reserved.</p>
+			<p class="copyright text footer__copyright">© 2019 Paradise Hotel. All Rights Reserved.</p>
 			<div class="footer__social social-links">
 				<a href="#" class="social-link social-link--tw">
 				</a>
@@ -181,7 +185,7 @@
 				</a>
 			</div>
 		
-			<div class="footer__menu">
+			<div class="footer__menu-wrapper">
 				<ul class="nav-list">
 					<li class="nav-list__item nav-list__item--footer">
 						<a class="nav-list__link nav-list__link--footer" href="#">Home</a>
@@ -192,7 +196,7 @@
 					<li class="nav-list__item nav-list__item--footer">
 						<a class="nav-list__link nav-list__link--footer" href="#">Reservation</a>
 					</li>
-					<li class="nav-list__item nav-list__item--footer">
+					<li class="nav-list__item nav-list__item--footer nav-list__item--last">
 						<a class="nav-list__link nav-list__link--footer" href="#">Contact</a>
 					</li>
 				</ul>

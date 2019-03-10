@@ -2,7 +2,7 @@
 	width: 100%;
 	position: relative;
 	height: 51px;
-	background-image: linear-gradient(left, transparent 0%, 
+	background-image: linear-gradient(to right, transparent 0%, 
 		rgb(251, 251, 251) 20%, rgb(251, 251, 251), rgb(251, 251, 251) 70%, transparent 100%);
 	&::before {
 	content: "";
@@ -11,16 +11,17 @@
 	bottom: 0px;
 	position: absolute;
 	padding-bottom: 1px;
-	background-image: linear-gradient(left, transparent 0%, #fff 10%, 
+	background-image: linear-gradient(to right, transparent 0%, #fff 10%, 
 		#fff 90%, transparent 100% );
 	}
 	&::after {
 		position: absolute;
-		width: 980px;
+		width: 100%;
+		max-width: $PC-wrap;
 		height: 6px;
 		content: "";
 		bottom: -5px;
-        background-image: linear-gradient(bottom, transparent, rgb(189, 189, 189));
+        background-image: linear-gradient(to top, transparent, rgb(189, 189, 189));
         box-shadow: inset -200px 0px 230px -100px rgb(235, 235, 235),
         			inset 200px 0px 230px -100px rgb(235, 235, 235);
 	}

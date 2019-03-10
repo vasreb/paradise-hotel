@@ -5,3 +5,11 @@
 	line-height: 20px;
 	color: rgb(109, 107, 107);
 }
+
+
+@media (max-width: $mobile-width) {
+	.text {
+	line-height: 25px;
+	font-size: 15px;
+	}
+}

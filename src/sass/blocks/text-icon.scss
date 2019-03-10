@@ -8,8 +8,9 @@
 }
 
 .text-icon__text {
-	margin: 0;
-	padding-top: 3px;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 7px;
 	padding-left: 2px;
 }
 
@@ -22,7 +23,7 @@
 	transition: all 0.3s;
 }
 
-.text-icon:hover .text-icon__icon {
+.text-icon:hover .text-icon__icon--blues {
 	background-image: url("/../build/images/room-icons-blue.png");
 }
 
@@ -36,15 +37,19 @@
 .text-icon__icon--chat {
 	height: 16px;
 	width: 23px;
-	margin-bottom: 1px;
+	margin-bottom: 0px;
 	margin-right: -5px;
 }
 
 .text-icon__icon--mail {
 	height: 13px;
 	width: 21px;
-	margin-right: -4px;
-	margin-top: -2px;
+	margin-right: -5px;
+	margin-top: -1px;
+}
+
+.text-icon__text--mail {
+	padding-top: 0;
 }
 
 .text-icon__separ {
