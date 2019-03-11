@@ -6,24 +6,24 @@
 	flex-wrap: wrap;
 }
 
-
 .nav-list__link {
-	color: #fff;
-	text-decoration: none;
 	font-family: 'OpenSans Light';
 	font-size: 17px;
+	text-decoration: none;
+	color: #fff;
 	white-space: nowrap;
 }
 
 .nav-list__item {
 	flex-grow: 1;
-	position: relative;
 	flex-shrink: 1;
 	padding-left: 16px;
 	padding-right: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	text-align: center;
+	position: relative;
+
 	&::before {
 		position: absolute;
 		content: "";
@@ -42,12 +42,9 @@
 	};
 }
 
-
-
 .nav-list__link--selected {
 	color: $main-blue;	
 }
-
 
 .nav-list__link--footer {
 	font-family: "OpenSans Regular";
@@ -75,6 +72,7 @@
 	}
 
 	.nav-list__item {
+		
 		&::before {
 		display: none;
 		}

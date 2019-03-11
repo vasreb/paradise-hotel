@@ -1,6 +1,9 @@
 
+.page-content {
+	position: relative;
+}
+
 .page-content__sub-menu {
-	max-width: $PC-wrap;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -11,10 +14,6 @@
 
 .page-content__horizontal-flex {
 	margin-top: 41px;
-}
-
-.page-content {
-	position: relative;
 }
 
 .page-content__center-text {

@@ -3,21 +3,19 @@
 }
 
 .narrative__header {
-
+	margin-bottom: 11px;
 }
 
 .narrative__header-text {
-	font-family: "OpenSans Light";
-	@include sharpfont;
-	font-size: 25px;
 	margin: 0;
+	font-family: "OpenSans Light";
+	font-weight: 200;
+	font-size: 25px;
 	color: rgb(55, 53, 53);
 } 
 
-
 .narrative__text {
 	padding-left: 1px;
-	margin-top: 11px;
 	margin-bottom: 20px;
 }
 

@@ -8,7 +8,7 @@
 
 .presentation__header-text {
 	font-family: "OpenSans Light";
-	@include sharpfont;
+	font-weight: 200;
 	font-size: 20px;
 	margin: 0;
 	color: rgb(55, 53, 53);
@@ -21,7 +21,6 @@
 }
 
 .presentation__item--first {
-	margin-top: 35px;
 }
 
 .presentation__item--last {

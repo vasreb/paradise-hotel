@@ -1,17 +1,17 @@
 .text-icon {
 	width: 100%;
+	min-height: 39px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	min-height: 39px;
 }
 
 .text-icon__text {
-	margin-top: auto;
-	margin-bottom: auto;
 	padding-top: 7px;
 	padding-left: 2px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .text-icon__icon {
@@ -48,10 +48,6 @@
 	margin-top: -1px;
 }
 
-.text-icon__text--mail {
-	padding-top: 0;
-}
-
 .text-icon__separ {
 	height: 1px;
 	width: 100%;
@@ -61,17 +57,13 @@
 
 .text-icon__icon--wifi {
 	background-image: url("/../build/images/room-icons.png");
-
 	background-position: 0px 0px;
 }
-
-
 
 .text-icon__icon--health {
 	width: 36px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-
 	background-position: 0px -22px;
 }
 
@@ -79,22 +71,17 @@
 	width: 35px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-
 	background-position: 0px -44px;
-
 }
 
 .text-icon__icon--service {
 	width: 35px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	
 	background-position: 0px -66px;
-	
 }
 
 .text-icon__icon--minibar {
-
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
 	background-position: 0px -92px;
@@ -105,5 +92,4 @@
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
 	background-position: 0px -120px;
-	
 }

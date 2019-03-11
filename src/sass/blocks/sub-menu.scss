@@ -1,19 +1,22 @@
 .sub-menu {
-	width: 100%;
-	position: relative;
+	max-width: $PC-wrap;
 	height: 51px;
 	background-image: linear-gradient(to right, transparent 0%, 
-		rgb(251, 251, 251) 20%, rgb(251, 251, 251), rgb(251, 251, 251) 70%, transparent 100%);
+		rgb(251, 251, 251) 20%, rgb(251, 251, 251), rgb(251, 251, 251) 70%, 
+		transparent 100%);
+	position: relative;
+
 	&::before {
-	content: "";
-	height: 1px;
-	width: 100%;
-	bottom: 0px;
-	position: absolute;
-	padding-bottom: 1px;
-	background-image: linear-gradient(to right, transparent 0%, #fff 10%, 
-		#fff 90%, transparent 100% );
+		content: "";
+		height: 1px;
+		width: 100%;
+		bottom: 0px;
+		position: absolute;
+		padding-bottom: 1px;
+		background-image: linear-gradient(to right, transparent 0%, #fff 10%, 
+			#fff 90%, transparent 100% );
 	}
+
 	&::after {
 		position: absolute;
 		width: 100%;
@@ -28,6 +31,9 @@
 }
 
 .sub-menu--map {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	position: absolute;
 	&::after {
 		box-shadow: none;
@@ -35,21 +41,21 @@
 }
 
 .sub-menu__absolute-wrapper {
-	width: 980px;
+	max-width: $PC-wrap;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
 }
+
 
 @media (max-width: $mobile-width) {
 	.sub-menu { 
-	background-color: rgb(251, 251, 251);
-	
 	height: auto;
 	width: 100%;
+	background-color: rgb(251, 251, 251);
 	
-	&::after {
-		width: auto;
+		&::after {
+			width: auto;
+		}
 	}
-}
-
 }

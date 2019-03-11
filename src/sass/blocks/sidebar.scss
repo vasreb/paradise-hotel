@@ -4,6 +4,10 @@
 	flex-direction: column;
 }
 
+.sidebar__search {
+	margin-top: 7px;
+}
+
 .sidebar__reservations {
 	margin-top: 39px;
 }
@@ -12,14 +16,9 @@
 	margin-top: 39px;
 }
 
-.sidebar__search {
-	margin-top: 7px;
-}
 
-@media (max-width: $mobile-width) { 
-	
+@media (max-width: $mobile-width) { 	
 	.sidebar {
 		width: 70%;
 	}
-
-	}
+}

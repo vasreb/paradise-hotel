@@ -8,6 +8,7 @@
 .main__h-separ {
 	margin-top: 35px; 
 	margin-bottom: 35px; 
+	background-position: 2px 0px;
 }
 
 .main__narrative {
@@ -15,7 +16,6 @@
 }
 
 @media (max-width: $mobile-width) { 
-
 	.main {
 		width: auto;
 	}

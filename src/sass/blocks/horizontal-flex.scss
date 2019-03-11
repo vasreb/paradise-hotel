@@ -10,25 +10,28 @@
 .horizontal-flex__v-separ {
 	height: 593px;
 	width: 1px;
-	background-color: rgb(205, 205, 205);
-	padding-left: 7.14%;
+	padding-left: 7.17%;
+	padding-right: 3.1%;
 	margin-left: auto;
 	margin-top: 9px;
-	padding-right: 3.1%;
+	background-color: rgb(205, 205, 205);
 	background-clip: content-box;
 }
+
 
 @media (max-width: $mobile-width) {
 	
 	.horizontal-flex {
-	width: auto;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
+		width: auto;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
 	}
+
 	.horizontal-flex__v-separ {
 		display: none;
 	}
+
 	.horizontal-flex__sidebar {
 		margin-top: 10px;
 	}

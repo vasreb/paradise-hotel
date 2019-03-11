@@ -1,51 +1,48 @@
 .lang {
 	height: 13px;
-	width: 30px;
+	width: 32px;
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: row;
 }
 
 .lang__current {
+	font-family: 'OpenSans Light';
 	font-size: 13px;
-	position: relative;
 	color: #fff;
 	text-decoration: none;
-	font-family: 'OpenSans Light';
+	position: relative;
+
  	&::after {
- 		position: absolute;
  		content: "";
+ 		position: absolute;
 		width: 10px;
 		height: 5px;
-		background-image: url("../images/select.png");
-		background-repeat: no-repeat;
 		top: 5px;
 		right: -16px;
-	} 
+		background-image: url("../images/select.png");
+		background-repeat: no-repeat;
+		} 
 } 
 
 @media (max-width: $mobile-width) { 
 
 	.lang {
-	height: 40px;
+		height: 40px;
 	}
 
-
 	.lang__current {
-
 		font-size: 20px;
 
 		&::after {
- 		position: absolute;
  		content: "";
+ 		position: absolute;
 		width: 10px;
 		height: 5px;
-		background-image: url("../images/select.png");
-		background-repeat: no-repeat;
 		top: 10px;
 		right: -15px;
-
-	} 
-
+		background-image: url("../images/select.png");
+		background-repeat: no-repeat;
+		} 
 	}
 }

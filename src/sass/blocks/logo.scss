@@ -2,57 +2,59 @@
 .logo {
 	width: 165px;
 	height: 48px;
+	padding-top: 3px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 3px;
-	
+	flex-shrink: 0;
+ }
+
+ .logo__a {
+	text-decoration: none;
  }
 
 .logo__top-line {
 	height: 1px;
 	width: 158px;
 	background-color: $line-grey;
-	
 }
 
 .logo__text {
 	margin-top: 3px; 
 	margin-bottom: 0px;
-	text-transform: uppercase;
 	font-family: 'DaxCondensed Light';
 	font-size: 28px;
+	text-transform: uppercase;
 	color: #fff;
-	@include sharpfont;
+	font-weight: 200;
 	white-space: nowrap;
-	font-stretch: condensed;
 } 
 
 
 .logo__stars-line {
-	position: relative;
 	width: 54px;
 	height: 8px;
 	background-image: url("../images/stars.svg");
 	background-repeat: no-repeat;
 	background-position: 0.5px 0px;
+	position: relative;
 
 	&::after {
 		content: "";
+		position: absolute;
 		width: 49px;
 		height: 1px;
-		position: absolute;
-		left: (54px + 4px);
+		left: 58px;
 		top: 4px;
 		background-color: $line-grey;
 	}
 
 	&::before {
 		content: "";
+		position: absolute;
 		width: 49px;
 		height: 1px;
-		position: absolute;
-		right: (54px + 4px);
+		right: 58px;
 		top: 4px;
 		background-color: $line-grey;
 	}
@@ -61,23 +63,26 @@
 
 @media (max-width: $mobile-width) {
 	.logo {
-	margin-top: 20px;
-	width: 100%;
-	height: auto;
+		width: 100%;
+		height: auto;
 	}
 
 	.logo__top-line {
 		width: 260px;
 	}
+
+	.logo__text {
+		font-size: 50px;
+	}
+
 	.logo__stars-line {
+
 		&::after {
 			width: 100px;
 		}
+
 		&::before {
 			width: 100px;
 		}
-	}
-	.logo__text {
-		font-size: 50px;
 	}
 }
