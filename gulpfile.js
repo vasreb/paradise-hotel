@@ -11,7 +11,8 @@ var webp = require("gulp-webp"); // нужен дебильный win10
 var svg = require("gulp-svgstore"); // svg compilator
 var svgMin = require("gulp-svgmin"); // svg minimizer
 var rename = require("gulp-rename"); // renamer
-
+var htmlmin = require("gulp-html-minifier");
+var csso = require("gulp-csso");
 //copy 
 function copy() {
 return gulp.src([
@@ -22,10 +23,19 @@ return gulp.src([
      .pipe(gulp.dest("build"));
 }
 
+//HTML minifier
+
+function minifyhtml() {
+  return gulp
+  	.src('./src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./'))
+};
+
 //style compilation SCSS
 
 function compilStyles() {
-return gulp.src("./src/sass/style.scss")
+	return gulp.src("./src/sass/style.scss")
 		.pipe(plumber())
 		.pipe(sass())
 
@@ -39,14 +49,25 @@ return gulp.src("./src/sass/style.scss")
 		}))
 
 
-		.pipe(gulp.dest("./build/css"))
+		.pipe(gulp.dest("./build/css/"))
 		.pipe(browserSync.stream());
 }
+
+function cssMin() {
+	return gulp
+    	.src('./build/css/style.css')
+        .pipe(csso({
+            restructure: true,
+            debug: true
+        }))
+        .pipe(gulp.dest('./build/css/'));
+};
+
 
 //JS compil
 
 function compilScript() {
-return gulp.src("./src/js/*.js")
+	return gulp.src("./src/js/*.js")
 		.pipe(uglify({
 			toplevel: true
 		}))
@@ -112,6 +133,8 @@ gulp.task("clean", clean);
 gulp.task("compilImages", compilImages);
 gulp.task("svgSprite", svgSprite);
 gulp.task("copy", copy);
+gulp.task("minifyhtml", minifyhtml);
+gulp.task("cssMin", cssMin);
 
 //build
 
@@ -120,7 +143,9 @@ gulp.task('build', gulp.series('clean',
 							'compilScript', 
 							'compilImages', 
 							'svgSprite',
-							'copy')));
+							'copy',
+							'minifyhtml',
+							), 'cssMin'));
 
 
 //devmode: build, after watch
