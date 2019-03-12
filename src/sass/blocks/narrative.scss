@@ -8,7 +8,7 @@
 
 .narrative__header-text {
 	margin: 0;
-	font-family: "OpenSans Light";
+	font-family: $OSLight;
 	font-weight: 200;
 	font-size: 25px;
 	color: rgb(55, 53, 53);
@@ -24,6 +24,6 @@
 }
 
 .narrative__strong {
-	font-family: "OpenSans Bold";
+	font-family: $OSBold;
 	font-weight: 700;
 } 

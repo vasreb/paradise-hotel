@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="preload" href="./build/fonts/DaxCondensed.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="./build/fonts/DaxCondensedLight.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="./build/fonts/opensans.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="./build/fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="./build/fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+	<meta name="theme-color" content="rgb(25,25,25)">
 	<meta charset="UTF-8">
 	<meta name="viewport"
 	content="width=device-width,initial-scale=1">
+	<meta name="Description" content="Paradise hotel: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
 	<title>About Hotel</title>
 	<link rel="stylesheet" href="./build/css/style.css">
 	
@@ -155,20 +163,23 @@
 
 				</div>
 				<div class="reservations sidebar__reservations">
+					<form>
+					<label>
 					<h4 class="reservations__h h4">
 						Reservations
 					</h4>
 					<p class="reservations__desc text">Request a reservation. We will come back to you shortly.</p>
-					<form>
 						<select class="input reservations__select">
    							<option class="reservations__select" value="" disabled selected >Select a Room...</option>
    							<option class="reservations__select" value="test">test</option>
 						</select>
+					
 						<div class="reservations__container">
 							<input class="reservations__date reservations__date--from input" type="date">
 							<input class="reservations__date reservations__date--to input" type="date">
 						</div>
 						<input class="reservations__submit button-submit" type="submit" value="Book now">
+					</label>
 					</form>
 				</div>
 			</aside>

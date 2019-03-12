@@ -86,7 +86,7 @@ function watch() {
 
     gulp.watch("./fonts/*.{ttf, otf, woff, woff2}", copy);
 	gulp.watch("./src/sass/**/*.{scss, sass}", compilStyles);
-	gulp.watch("./*.html").on('change', browserSync.reload);
+	gulp.watch("./src/*.html").on('change', browserSync.reload);
 }
 
 //img compresser

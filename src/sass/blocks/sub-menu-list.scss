@@ -26,7 +26,7 @@
 }
 
 .sub-menu-list__link {
-	font-family: "OpenSans Light";
+	font-family: $OSLight;
 	color: #373535;
 	text-decoration: none;
 	font-size: 15px;
@@ -34,7 +34,7 @@
 }
 
 .sub-menu-list__link--selected {
-	font-family: "OpenSans Bold";
+	font-family: $OSBold;
 }
 
 @media (max-width: $mobile-width) {

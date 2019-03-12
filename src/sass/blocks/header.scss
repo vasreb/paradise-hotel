@@ -13,7 +13,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;	
+	align-items: center;
 }
 
 .header__space {
@@ -88,7 +88,7 @@
 
 @media (max-width: $mobile-width) {
 	.header__wrapper {
-		width: 100%;
+		width: 95%;
 		height: auto;
 		flex-direction: column;
 		justify-content: space-around;
