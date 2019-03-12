@@ -1,6 +1,5 @@
 # Paradise Hotel site
-
-##This project uses:
+## This project uses:
 - BEM methodology
 - GULP
 - SASS-preprocessor
