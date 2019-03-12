@@ -1,17 +1,25 @@
 @font-face {
+  font-family: "Impact";
+  font-weight: 1;
+}
+
+@font-face {
   font-family: "DaxCondensed";
+  font-display: swap;
   src: url("./../fonts/DaxCondensed.woff2");
   font-style: normal;
 }
 
 @font-face {
   font-family: "DaxCondensed Light";
+  font-display: swap;
   src: url("./../fonts/DaxCondensedLight.woff2");
   font-style: normal;
 }
 
 @font-face {
   font-family: "OpenSans Light";
+  font-display: swap;
   src: url("./../fonts/opensanslight.woff2"),
        url("./../fonts/opensanslight.woff");
   font-style: normal;
@@ -19,6 +27,7 @@
 
 @font-face {
   font-family: "OpenSans Bold";
+  font-display: swap;
   src: url("./../fonts/opensansbold.woff"),
        url("./../fonts/opensansbold.woff2");
   font-style: normal;
@@ -27,6 +36,7 @@
 
 @font-face {
   font-family: "OpenSans Regular";
+  font-display: swap;
   src: url("./../fonts/opensans.woff"),
        url("./../fonts/opensans.woff2");
   font-style: normal;
