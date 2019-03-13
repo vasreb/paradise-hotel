@@ -1,17 +1,19 @@
 .service-card {
-	max-width: 300px;
-	min-width: 300px;
+	width: 296px;
+	min-height: 270px;
 	display: flex;
 	flex-direction: column;
+	box-sizing: border-box;
+	margin-bottom: 37px;
 }
 
 .service-card__video {
 	position: relative;
-	height: 149px;
+	height: 147px;
 	width: 100%;
 	border-radius: 3px;
 	background-color: rgb(252, 253, 255);
-	margin-bottom: 23px;
+	margin-bottom: 15px;
 	border: 1px solid #d8d9db;
 
 	transition: all 0.5s 0.1s;
@@ -47,12 +49,12 @@
 .service-card__h {
 	font-family: $OSLight;
 	font-size: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 .service-card-desc {
-	margin-bottom: 51px;
 	line-height: 17px;
+	padding-left: 1px;
 }
 
 .service-card__video-thumbnail {
@@ -62,8 +64,11 @@
 }
 
 .service-card--mini {
-	max-width: 198px;
-	min-width: 198px;
+	width: 195px;
+}
+
+.service-card__video--mini {
+	margin-bottom: 17px;
 }
 
 @media (max-width: $mobile-width) {

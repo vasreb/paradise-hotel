@@ -41,3 +41,11 @@
        url("./../fonts/opensans.woff2");
   font-style: normal;
 }
+
+@font-face {
+  font-family: "OpenSans Extrabold";
+  font-display: swap;
+  src: url("./../fonts/opensansextrabold.woff"),
+       url("./../fonts/opensansextrabold.woff2");
+  font-style: normal;
+}

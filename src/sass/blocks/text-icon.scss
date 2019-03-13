@@ -1,17 +1,43 @@
 .text-icon {
 	width: 100%;
-	min-height: 39px;
+	min-height: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
+.text-icon--wifi {
+	height: 41px;
+}
+
+.text-icon--health {
+	height: 58px;
+}
+
+.text-icon--water {
+	height: 54px;
+}
+
+.text-icon--service {
+	height: 38px;
+}
+
+.text-icon--minibar {
+	height: 73px;
+	padding-bottom: 3px;
+}
+
+.text-icon--dinner {
+	height: 52px;
+}
+
 .text-icon__text {
-	padding-top: 7px;
 	padding-left: 2px;
 	margin-top: auto;
 	margin-bottom: auto;
+	width: 77%;
+	line-height: 18px;
 }
 
 .text-icon__icon {
@@ -22,6 +48,8 @@
 	flex-shrink: 0;
 	transition: background-image 0.3s;
 }
+
+
 
 .text-icon:hover .text-icon__icon--blues {
 	background-image: url("/../build/images/room-icons-blue.png");
@@ -57,39 +85,39 @@
 
 .text-icon__icon--wifi {
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px 0px;
+	background-position: 2px -1px;
 }
 
 .text-icon__icon--health {
 	width: 36px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px -22px;
+	background-position: 2px -25px;
 }
 
 .text-icon__icon--water {
 	width: 35px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px -44px;
+	background-position: 2px -44px;
 }
 
 .text-icon__icon--service {
 	width: 35px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px -66px;
+	background-position: 1px -68px;
 }
 
 .text-icon__icon--minibar {
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px -92px;
+	background-position: 2px -92px;
 }
 
 .text-icon__icon--dinner {
 	width: 35px;
 	height: 20px;
 	background-image: url("/../build/images/room-icons.png");
-	background-position: 0px -120px;
+	background-position: 2px -120px;
 }

@@ -86,6 +86,7 @@ function watch() {
 
     gulp.watch("./fonts/*.{ttf, otf, woff, woff2}", copy);
 	gulp.watch("./src/sass/**/*.{scss, sass}", compilStyles);
+	gulp.watch("./src/*.html").on('change', minifyhtml);
 	gulp.watch("./src/*.html").on('change', browserSync.reload);
 }
 
@@ -146,6 +147,7 @@ gulp.task('build', gulp.series('clean',
 							'copy',
 							'minifyhtml',
 							), 'cssMin'));
+
 
 
 //devmode: build, after watch
