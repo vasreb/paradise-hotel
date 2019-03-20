@@ -87,13 +87,14 @@ function watch() {
     gulp.watch("./fonts/*.{ttf, otf, woff, woff2}", copy);
 	gulp.watch("./src/sass/**/*.{scss, sass}", compilStyles);
 	gulp.watch("./src/*.html").on('change', minifyhtml);
+	gulp.watch("./src/js/*.js").on('change', compilScript);
 	gulp.watch("./src/*.html").on('change', browserSync.reload);
 }
 
 //img compresser
 
 function compilImages() {
-	return gulp.src('./src/images/*')
+	return gulp.src('./src/images/**/*.*')
         	.pipe(imageMin({
         			optimizationLevel: 3,
         			progressive: true
