@@ -5,6 +5,8 @@
 	width: 341px;
 	height: 85px;
 	background-color: rgb(47, 47, 47);
+	padding: 20px 18px;
+	box-sizing: border-box; 
 
 	&::after {
 		content: "";
@@ -22,9 +24,8 @@
 	font-family: $OSBold;
 	font-size: 14px;
 	color: #0087bc;
-	padding-left: 20px;
-	margin-top: 18px;
 	margin-bottom: 10px;
+	margin-top: 0;
 }
 
 .description__p {
@@ -32,7 +33,6 @@
 	font-size: 12px;
 	line-height: 14px;
 	color: rgb(132, 132, 132);
-	padding-left: 20px;
 	margin-top: 0;
 	margin-bottom: 0;
 }

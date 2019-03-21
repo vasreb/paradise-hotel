@@ -6,28 +6,28 @@ var thumbURLs = [
 		fullPic: 'url(./build/images/gallery/fullpic1.png)',
 		preview: 'url(./build/images/gallery/thumbnail1.png)',
 		hText: 'Tque nam ex magnam',
-		pText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus cum enim voluptate beatae amet.'
+		pText: 'Lorem ipsum dolor sit amet,  adipisicing elit. Quae accusamus cum enim voluptate beatae amet.'
 	},
 
 	{
 		fullPic: 'url(./build/images/gallery/fullpic2.png)',
 		preview: 'url(./build/images/gallery/thumbnail2.png)',
 		hText: 'Lorem ipsum dolor',
-		pText: 'Lorem ipsum dolor sit amet. odit modi deserunt optio delectus ex similique, numquam, libero fugiat facere.'
+		pText: 'Lorem ipsum dolor sit amet.  deserunt optio delectus ex similique, numquam, libero fugiat facere.'
 	},
 
 	{
 		fullPic: 'url(./build/images/gallery/fullpic3.png)',
 		preview: 'url(./build/images/gallery/thumbnail3.png)',
 		hText: 'Consectetur adipisicing',
-		pText: 'Amet, consectetur adipisicing elit. eritatis. Voluptatem sed neque pariatur, illum laborum cupiditate!'
+		pText: 'Amet, consectetur adipisicing elit. Voluptatem sed neque pariatur, illum laborum cupiditate!'
 	},
 
 	{
 		fullPic: 'url(./build/images/gallery/fullpic4.png)',
 		preview: 'url(./build/images/gallery/thumbnail4.png)',
 		hText: 'Quas accusamus',
-		pText: 'Quas accusamus quasi nobis, veritatis. Voluptatem sed neque pariatur, illum laborum cupiditate!'
+		pText: 'Quas accusamus quasi nobis. Voluptatem sed neque pariatur, illum laborum cupiditate!'
 	
 	},
 
@@ -35,7 +35,7 @@ var thumbURLs = [
 		fullPic: 'url(./build/images/gallery/fullpic5.png)',
 		preview: 'url(./build/images/gallery/thumbnail5.png)',
 		hText: 'Veritatis',
-		pText: 'Lorem ipsum dolor sit amet, adipisicing. Reprehenderit excepturi, tenetur, dolor aspernatur id iusto.'
+		pText: 'Lorem ipsum dolor sit amet. Reprehenderit excepturi, tenetur, dolor aspernatur id iusto.'
 	}
 ];
 	
