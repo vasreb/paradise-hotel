@@ -1,5 +1,7 @@
 .description {
-	position: relative;
+	position: absolute;
+	bottom: 1px;
+	left: 2px;
 	width: 341px;
 	height: 85px;
 	background-color: rgb(47, 47, 47);
@@ -33,4 +35,17 @@
 	padding-left: 20px;
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+@media (max-width: $mobile-width) { 
+	.description {
+		margin-top: -1px;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		&::after {
+			display: none;
+		}
+	}
 }

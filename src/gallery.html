@@ -14,6 +14,11 @@
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
 	<title>Image Gallery</title>
 	<link rel="stylesheet" href="./build/css/style.css">
+	<link rel="preload" href="./build/images/gallery/fullpic1.png" as="image">
+	<link rel="preload" href="./build/images/gallery/fullpic2.png" as="image">
+	<link rel="preload" href="./build/images/gallery/fullpic3.png" as="image">
+	<link rel="preload" href="./build/images/gallery/fullpic4.png" as="image">
+	<link rel="preload" href="./build/images/gallery/fullpic5.png" as="image">
 	<script src="./build/js/gallery.js" defer></script>
 </head> 
 <body class="page">
@@ -81,13 +86,15 @@
 			</ul>
 		</nav>
 		<section class="page-content__gallery gallery">
+			<div class="gallery__wrapper">
 			<div class="gallery__image-wrapper">
 				<div class="gallery__arrow arrow arrow-left"></div>
-				<div class="gallery__description description">
+				<div class="gallery__arrow arrow arrow-right"></div>
+			</div>
+			<div class="gallery__description description">
 					<h4 class="desctiption__h">Tque nam ex magnam</h4>
 					<p class="description__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus cum enim voluptate beatae amet.</p>
-				</div>
-				<div class="gallery__arrow arrow arrow-right"></div>
+			</div>
 			</div>
 			<div class="gallery__thumbnails-wrapper thumbnails-wrapper">
 				<div class="thumbnails-wrapper__thumbnail">
