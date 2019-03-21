@@ -11,13 +11,21 @@
 }
 
 .gallery__image-wrapper {
+	position: relative;
+	display: flex;
 	width: 99.285%;
 	height: 77.32%;
 	border: 1px solid rgb(203, 203, 203);
 	border-radius: 2px;
 	box-shadow: 0px 2px 0px 0px rgb(221, 221, 221);
+	transition: background-image 0.5s 0s;
 }
 
 .gallery__thumbnails-wrapper {
 	margin-top: 10px;
+}
+
+.gallery__description {
+	margin-top: auto;
+	margin-right: auto;
 }

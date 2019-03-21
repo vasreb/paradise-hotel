@@ -1,0 +1,36 @@
+.description {
+	position: relative;
+	width: 341px;
+	height: 85px;
+	background-color: rgb(47, 47, 47);
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		right: -30px;
+		top: 0;
+		border-top: 85px solid rgb(47, 47, 47);
+		border-right: 30px solid transparent;	
+	}	
+}
+
+.desctiption__h {
+	font-family: $OSBold;
+	font-size: 14px;
+	color: #0087bc;
+	padding-left: 20px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+
+.description__p {
+	font-family: $OSRegular;
+	font-size: 12px;
+	line-height: 14px;
+	color: rgb(132, 132, 132);
+	padding-left: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
