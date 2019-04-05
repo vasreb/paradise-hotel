@@ -1,15 +1,16 @@
 .page {
 	width: 100%;
+	transform: scale(1);
 }   
 
 .page__page-content {
 	margin-bottom: 121px;
-}
 
-.page__page-content--services {
-	margin-bottom: 109px;
-}
+	&--services {
+		margin-bottom: 109px;
+	}
 
-.page__page-content--room-suites {
-	margin-bottom: 134px;
+	&--room-suites {
+		margin-bottom: 134px;
+	}
 }

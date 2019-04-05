@@ -39,58 +39,94 @@ var thumbURLs = [
 	}
 ];
 	
+const page = document.querySelector('.page');
+const galleryBigImage = document.querySelector('.gallery__image-wrapper');
+const galleryDescH = document.querySelector('.desctiption__h');
+const galleryDescP = document.querySelector('.description__p');
+const thumbnailsDOMList = document.querySelectorAll('.thumbnails-wrapper__thumbnail');
+const arrowLeft = document.querySelector('.arrow--left');
+const arrowRight = document.querySelector('.arrow--right');
 
-var galleryBigImage = document.querySelector('.gallery__image-wrapper');
-var galleryDescH = document.querySelector('.desctiption__h');
-var galleryDescP = document.querySelector('.description__p');
-var thumbnailsDOMList = document.querySelectorAll('.thumbnails-wrapper__thumbnail');
-var arrowLeft = document.querySelector('.arrow-left');
-var arrowRight = document.querySelector('.arrow-right');
 
 galleryBigImage.style.backgroundImage = thumbURLs[0].fullPic;
-
-
 
 var thumbnailStorage = [];
 
 var currentThumbNumber = 0;
 
-for (var i = 0; i < thumbnailsDOMList.length; i++) {
+for (let i = 0; i < thumbnailsDOMList.length; i++) {
 	var thumbnail = {};
+	for (let key in thumbURLs[i]) {
+		thumbnail[key] = thumbURLs[i][key];
+	};
 	thumbnail.domElement = thumbnailsDOMList[i];
-	thumbnail.fullPic = thumbURLs[i].fullPic;
-	thumbnail.preview = thumbURLs[i].preview;
-	thumbnail.hText = thumbURLs[i].hText;
-	thumbnail.pText = thumbURLs[i].pText;
 	thumbnail.domElement.style.backgroundImage = thumbnail.preview;
 	thumbnail.number = i;
 	thumbnailStorage.push(thumbnail);
-	updateBigImage(thumbnail, thumbURLs[i]);
-}
+	addThumbnailsClickEvent(thumbnail, thumbURLs);
+};
 
 arrowLeft.addEventListener('click', function () {
 	if (currentThumbNumber > 0) {
-		galleryBigImage.style.backgroundImage = thumbnailStorage[currentThumbNumber-1].fullPic;
-		galleryDescH.innerHTML = thumbnailStorage[currentThumbNumber-1].hText;
-		galleryDescP.innerHTML = thumbnailStorage[currentThumbNumber-1].pText;
-		currentThumbNumber = currentThumbNumber - 1;
+		changeFullImage(thumbnailStorage, 'back');
 	}
 });
 
 arrowRight.addEventListener('click', function () {
-	if (currentThumbNumber < thumbnailStorage.length) {
-		galleryBigImage.style.backgroundImage = thumbnailStorage[currentThumbNumber+1].fullPic;
-		galleryDescH.innerHTML = thumbnailStorage[currentThumbNumber+1].hText;
-		galleryDescP.innerHTML = thumbnailStorage[currentThumbNumber+1].pText;
-		currentThumbNumber = currentThumbNumber + 1;
+	if (currentThumbNumber < thumbnailStorage.length - 1) {
+		changeFullImage(thumbnailStorage, 'next');
 	}
 });
 
-function updateBigImage(thumbnail, URLs) {
+function addThumbnailsClickEvent(thumbnail, thmbStrg) {
 	thumbnail.domElement.addEventListener('click', function () {
-	galleryBigImage.style.backgroundImage = URLs.fullPic;
-	galleryDescH.innerHTML = URLs.hText;
-	galleryDescP.innerHTML = URLs.pText;
-	currentThumbNumber = thumbnail.number;
+	changeFullImage(thmbStrg, 'click', thumbnail.number);
 	});
 };
+
+/*
+changeFullImage(thmbStrg, type [,number]);
+thmbStrg - thumbnail storage with thumbnail objects
+type - back, next, click. if click then uses number parameter
+number - number of thumbnail 
+*/
+function changeFullImage(thmbStrg, type, number) {
+	switch (type) {
+		case 'back':
+			var newImgNum = currentThumbNumber - 1;
+			currentThumbNumber--;
+			break;
+		case 'next':
+			var newImgNum = currentThumbNumber + 1;
+			currentThumbNumber++;
+			break;
+		case 'click':
+			var newImgNum = number;
+			currentThumbNumber = number;
+	};
+	let {fullPic, hText, pText} = thmbStrg[newImgNum];
+	galleryBigImage.style.backgroundImage = fullPic;
+	galleryDescH.innerHTML = hText;
+	galleryDescP.innerHTML = pText;
+};
+
+/*
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function pageColor() { 
+	page.style.filter="hue-rotate(" + getRandomInt(0, 360) + "deg)";
+}
+
+var interval = 2000;
+
+var timerId = setTimeout(function changeColor() {
+	pageColor();
+	if (interval < 0.002) {
+		interval = 2000;
+	}
+	interval /= 1.5; 
+	setTimeout(changeColor, interval);
+}, interval); */

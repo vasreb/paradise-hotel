@@ -1,8 +1,19 @@
-describe("pow", function() {
-  it("возводит 2 в 3-ю степень = 8", function() {
-    assert.equal(pow(2, 3), 8);
+"use strict";
+
+describe("addClass", function() {
+  it("если такая строка есть в списке она не добавляется", function() {
+  	var originalClassLength = obj.length;
+  	var existingStrings = obj.className.split(' ');
+  	for (var i = 0; i < existingStrings.length; i++) {
+  		addClass(obj, existingStrings[i]);
+	};
+	assert.notEqual(originalClassLength, obj.className.length);
   });
-  it("возводит 3 в 4-ю степень = 81", function() {
-	assert.equal(pow(3, 4), 81);
+  it("добавляет в список в объекте obj строку cls", function() {
+  	var originalClassNameString = obj.className;
+  	var example = originalClassNameString + " " + 'cls';
+  	addClass(obj, 'cls');
+  	assert.equal(obj.className, example);
   });
 });
+

@@ -6,21 +6,21 @@
 	background-repeat: no-repeat;
 	background-position: 0px 50%;
 	transition: transform 0s 0.3s;
-}
 
-.arrow-right {
-	right: 0;
-	background-position: 40px 50%;
-	&:hover {
-		transform: scale(1.1);
-	};
-}
+	&--right {
+		right: 0;
+		background-position: 40px 50%;
+		&:hover {
+			transform: scale(1.1);
+		};
+	}
 
-.arrow-left {
-	left: 0;
-	background-position: 40px 50%;
-	transform: rotate(180deg);
-	&:hover {
-		transform: rotate(180deg) scale(1.1);
-	};
+	&--left {
+		left: 0;
+		background-position: 40px 50%;
+		transform: rotate(180deg);
+		&:hover {
+			transform: rotate(180deg) scale(1.1);
+		};
+	}
 }
