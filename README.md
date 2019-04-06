@@ -7,4 +7,4 @@
 - etc.
 
 PSD folder contains .pngs of design template for existing pages
-### link: http://u0671520.cp.regruhosting.ru/
+### link: http://tasty-buys.000webhostapp.com

@@ -13,6 +13,8 @@ var svgMin = require("gulp-svgmin"); // svg minimizer
 var rename = require("gulp-rename"); // renamer
 var htmlmin = require("gulp-html-minifier");
 var csso = require("gulp-csso");
+var terser = require("gulp-terser");
+
 //copy 
 function copy() {
 return gulp.src([
@@ -68,9 +70,7 @@ function cssMin() {
 
 function compilScript() {
 	return gulp.src("./src/js/*.js")
-		.pipe(uglify({
-			toplevel: true
-		}))
+		.pipe(terser())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(browserSync.stream());
 }

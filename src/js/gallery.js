@@ -37,7 +37,7 @@ var thumbURLs = [
 		hText: 'Veritatis',
 		pText: 'Lorem ipsum dolor sit amet. Reprehenderit excepturi, tenetur, dolor aspernatur id iusto.'
 	}
-];
+]; //cap
 	
 const page = document.querySelector('.page');
 const galleryBigImage = document.querySelector('.gallery__image-wrapper');
