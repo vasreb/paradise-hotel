@@ -1,6 +1,6 @@
 "use strict";
 
-var thumbURLs = [
+const thumbURLs = [
 
 	{
 		fullPic: 'url(./build/images/gallery/fullpic1.png)',
@@ -37,96 +37,86 @@ var thumbURLs = [
 		hText: 'Veritatis',
 		pText: 'Lorem ipsum dolor sit amet. Reprehenderit excepturi, tenetur, dolor aspernatur id iusto.'
 	}
-]; //cap
-	
-const page = document.querySelector('.page');
-const galleryBigImage = document.querySelector('.gallery__image-wrapper');
-const galleryDescH = document.querySelector('.desctiption__h');
-const galleryDescP = document.querySelector('.description__p');
-const thumbnailsDOMList = document.querySelectorAll('.thumbnails-wrapper__thumbnail');
+];
+
+class Gallery {
+	constructor(thumbnailsNodes, imageUrls, {wrapper, mainImageNode, descHeadingNode, descTextNode, arrowLeft, arrowRight}) {
+		this._nodes = {
+			wrapper,
+			descTextNode,
+			descHeadingNode,
+			mainImageNode,
+			arrowLeft,
+			arrowRight
+		};
+		this._nodes.mainImageNode.style.backgroundImage = imageUrls[0].fullPic;
+		this._currentThumbIndex = 0;
+		this._thumbnailStorage = [];
+		[].forEach.call(thumbnailsNodes, (node, i) => {
+			node.obj = {};
+			for (let key in imageUrls[i]) {
+				node.obj[key] = imageUrls[i][key];
+				node.obj.number = i;
+			};
+			node.style.backgroundImage = node.obj.preview;
+			this._thumbnailStorage.push(node);
+		});
+		this._addListeners();
+	}
+	_changeFullImage (type, thumbnail) {
+		let newImgNum = 0;
+		switch (type) {
+			case 'back':
+				newImgNum = this._currentThumbIndex - 1;
+				this._currentThumbIndex--;
+				break;
+			case 'next':
+				newImgNum = this._currentThumbIndex + 1;
+				this._currentThumbIndex++;
+				break;
+			case 'click':
+				newImgNum = thumbnail.number;
+				this._currentThumbIndex = thumbnail.number;
+		};
+		let {fullPic, hText, pText} = this._thumbnailStorage[newImgNum].obj;
+		this._nodes.mainImageNode.style.backgroundImage = fullPic;
+		this._nodes.descHeadingNode.innerHTML = hText;
+		this._nodes.descTextNode.innerHTML = pText;
+	}
+	_addListeners() {
+		this._nodes.wrapper.addEventListener('click', (event) => {
+			if (event.target == this._nodes.arrowLeft) {
+				if (this._currentThumbIndex > 0) {
+					this._changeFullImage('back');
+				}
+			}
+			if (event.target == this._nodes.arrowRight) {
+				if (this._currentThumbIndex < this._thumbnailStorage.length - 1) {
+					this._changeFullImage('next');
+				}
+			}
+			if (event.target.classList.contains('thumbnails-wrapper__thumbnail')) {
+				this._changeFullImage('click', event.target.obj);
+			}
+		});
+	}
+}
+
+const mainImageNode = document.querySelector('.gallery__image-wrapper');
+const galleryDescHeading = document.querySelector('.desctiption__h');
+const galleryDescText = document.querySelector('.description__p');
+const thumbNodesList = document.querySelectorAll('.thumbnails-wrapper__thumbnail');
 const arrowLeft = document.querySelector('.arrow--left');
 const arrowRight = document.querySelector('.arrow--right');
+const wrapper = document.querySelector('.gallery');
 
-
-galleryBigImage.style.backgroundImage = thumbURLs[0].fullPic;
-
-var thumbnailStorage = [];
-
-var currentThumbNumber = 0;
-
-for (let i = 0; i < thumbnailsDOMList.length; i++) {
-	var thumbnail = {};
-	for (let key in thumbURLs[i]) {
-		thumbnail[key] = thumbURLs[i][key];
-	};
-	thumbnail.domElement = thumbnailsDOMList[i];
-	thumbnail.domElement.style.backgroundImage = thumbnail.preview;
-	thumbnail.number = i;
-	thumbnailStorage.push(thumbnail);
-	addThumbnailsClickEvent(thumbnail, thumbURLs);
+const galleryMainNodes = {
+	wrapper,
+	mainImageNode,
+	descHeadingNode: galleryDescHeading,
+	descTextNode: galleryDescText,
+	arrowLeft, 
+	arrowRight
 };
 
-arrowLeft.addEventListener('click', function () {
-	if (currentThumbNumber > 0) {
-		changeFullImage(thumbnailStorage, 'back');
-	}
-});
-
-arrowRight.addEventListener('click', function () {
-	if (currentThumbNumber < thumbnailStorage.length - 1) {
-		changeFullImage(thumbnailStorage, 'next');
-	}
-});
-
-function addThumbnailsClickEvent(thumbnail, thmbStrg) {
-	thumbnail.domElement.addEventListener('click', function () {
-	changeFullImage(thmbStrg, 'click', thumbnail.number);
-	});
-};
-
-/*
-changeFullImage(thmbStrg, type [,number]);
-thmbStrg - thumbnail storage with thumbnail objects
-type - back, next, click. if click then uses number parameter
-number - number of thumbnail 
-*/
-function changeFullImage(thmbStrg, type, number) {
-	switch (type) {
-		case 'back':
-			var newImgNum = currentThumbNumber - 1;
-			currentThumbNumber--;
-			break;
-		case 'next':
-			var newImgNum = currentThumbNumber + 1;
-			currentThumbNumber++;
-			break;
-		case 'click':
-			var newImgNum = number;
-			currentThumbNumber = number;
-	};
-	let {fullPic, hText, pText} = thmbStrg[newImgNum];
-	galleryBigImage.style.backgroundImage = fullPic;
-	galleryDescH.innerHTML = hText;
-	galleryDescP.innerHTML = pText;
-};
-
-/*
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function pageColor() { 
-	page.style.filter="hue-rotate(" + getRandomInt(0, 360) + "deg)";
-}
-
-var interval = 2000;
-
-var timerId = setTimeout(function changeColor() {
-	pageColor();
-	if (interval < 0.002) {
-		interval = 2000;
-	}
-	interval /= 1.5; 
-	setTimeout(changeColor, interval);
-}, interval); */
+let galleryManager = new Gallery(thumbNodesList, thumbURLs, galleryMainNodes);

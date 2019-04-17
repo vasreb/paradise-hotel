@@ -1,1 +1,0 @@
-"use strict";describe("addClass",function(){it("если такая строка есть в списке она не добавляется",function(){for(var s=obj.length,a=obj.className.split(" "),l=0;l<a.length;l++)addClass(obj,a[l]);assert.notEqual(s,obj.className.length)}),it("добавляет в список в объекте obj строку cls",function(){var s=obj.className+" cls";addClass(obj,"cls"),assert.equal(obj.className,s)})});
